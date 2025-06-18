@@ -67,9 +67,9 @@ export default function HeroSection() {
     >
       <div className="z-10 flex flex-col items-center">
         <h1 className="flex flex-col text-4xl font-bold text-center sm:flex-row sm:gap-4 sm:text-6xl lg:text-9xl text-primary-text font-acorn">
-          <div className="flex flex-col items-center gap-4 md:flex-row ">
+          <div className="flex items-center gap-2 md:gap-4">
             <div className="flex items-center md:flex-row md:gap-4">
-              <p>Hi.</p>
+              <p>Hi. </p>
               <p>I'm </p>
             </div>
             <span>
@@ -84,7 +84,7 @@ export default function HeroSection() {
           </div>
         </h1>
         <p className="text-4xl font-bold text-center sm:text-6xl lg:text-8xl text-primary-text font-acorn">
-          A Software Developer
+          A Developer
         </p>
         <div className="flex flex-col items-center mt-8 text-sm text-center md:max-w-xl md:mt-10 sm:text-md md:text-lg ">
           <p className="font-medium text-primary-text font-secondary">
@@ -93,10 +93,20 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="flex items-center justify-center gap-4 mt-4 ">
-          <a href={GITHUB_URL} className="cursor-pointer" target="_blank">
+          <a
+            href={GITHUB_URL}
+            className="cursor-pointer"
+            target="_blank"
+            aria-label="github_govind"
+          >
             <FaGithub className="text-2xl text-primary-text" />
           </a>
-          <a className="cursor-pointer" target="_blank" href={LINKEDIN_URL}>
+          <a
+            className="cursor-pointer"
+            target="_blank"
+            href={LINKEDIN_URL}
+            aria-label="linkedin_govind"
+          >
             <FaLinkedin className="text-2xl text-primary-text" />
           </a>
         </div>

@@ -55,39 +55,43 @@ export default function Navbar() {
   return (
     <div className="fixed left-0 right-0 z-10 flex justify-center top-10">
       <div className="p-2 px-4 w-fit">
-        <ul className="relative flex px-2">
-          {navItems.map((item, index) => {
-            if (index === 0 && item.name === "Home") {
+        <div className="relative px-2">
+          <ul className="relative flex">
+            {navItems.map((item, index) => {
+              if (index === 0 && item.name === "Home") {
+                return (
+                  <li key={index} className="relative z-10">
+                    <a
+                      key={item.name}
+                      ref={(el) => (navRefs.current[index] = el)}
+                      href={item.path}
+                      className={`flex gap-2 items-center text-xs sm:text-sm md:text-base px-2 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 font-medium transition-colors duration-300 text-[#6F4E37]`}
+                      onClick={(e) => handleNavClick(index, e)}
+                      aria-label={`Navigate to ${item.name}`}
+                    >
+                      {item.name}
+
+                      <p className="inline-block px-2 shadow">/</p>
+                    </a>
+                  </li>
+                );
+              }
               return (
                 <li key={index} className="relative z-10">
                   <a
                     key={item.name}
                     ref={(el) => (navRefs.current[index] = el)}
                     href={item.path}
-                    className={`flex gap-2 items-center text-xs sm:text-sm md:text-base px-2 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 font-medium transition-colors duration-300 ${"text-primary-text"}`}
+                    className={`block text-xs sm:text-sm md:text-base px-2 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 font-medium transition-colors duration-300 text-[#6F4E37]`}
                     onClick={(e) => handleNavClick(index, e)}
+                    aria-label={`Navigate to ${item.name}`}
                   >
                     {item.name}
-
-                    <p className="inline-block px-2 shadow">/</p>
                   </a>
                 </li>
               );
-            }
-            return (
-              <li key={index} className="relative z-10">
-                <a
-                  key={item.name}
-                  ref={(el) => (navRefs.current[index] = el)}
-                  href={item.path}
-                  className={`block text-xs sm:text-sm md:text-base px-2 sm:px-4 md:px-6 py-2 sm:py-2 md:py-3 font-medium transition-colors duration-300 text-primary-text`}
-                  onClick={(e) => handleNavClick(index, e)}
-                >
-                  {item.name}
-                </a>
-              </li>
-            );
-          })}
+            })}
+          </ul>
           <div
             className="absolute z-0 transition-all duration-300 ease-in-out transform -translate-y-1/2 bg-white top-1/2 backdrop-blur-2xl rounded-4xl h-4/5"
             style={{
@@ -95,7 +99,7 @@ export default function Navbar() {
               left: `${sliderStyle.left}px`,
             }}
           />
-        </ul>
+        </div>
       </div>
     </div>
   );
