@@ -91,11 +91,11 @@ export default function HeroSection() {
             </div>
           </h1>
           <p className="text-4xl font-bold text-center sm:text-6xl lg:text-8xl text-primary-text font-acorn">
-            A Developer
+         Engineer
           </p>
           <div className="flex flex-col items-center mt-8 text-sm text-center md:max-w-xl md:mt-10 sm:text-md md:text-lg ">
             <p className="font-medium text-primary-text font-secondary">
-              Passionate software developer specializing in creating robust,
+              Passionate software engineer specializing in creating robust,
               user-friendly applications that solve real problems.
             </p>
           </div>
