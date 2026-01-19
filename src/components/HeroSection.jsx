@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa6";
+import { TbFileCv } from "react-icons/tb";
 import { GITHUB_URL, LINKEDIN_URL } from "./Contact";
 
 export default function HeroSection() {
@@ -59,8 +60,7 @@ export default function HeroSection() {
     <>
       <div>
         <p className="text-center text-sm font-semibold text-primary-text ">
-          The website is going under maintenance. More sections are coming
-          soon!.
+          Thinking of ideas to build🤔🤔🤔. Will be back with more sections.
         </p>
       </div>
       <div
@@ -115,6 +115,14 @@ export default function HeroSection() {
               aria-label="linkedin_govind"
             >
               <FaLinkedin className="text-2xl text-primary-text" />
+            </a>
+            <a
+              href={"/Govind_SoftwareEngineer.pdf"}
+              className="cursor-pointer"
+              target="_blank"
+              aria-label="resume_govind"
+            >
+              <TbFileCv className="text-2xl text-primary-text" />
             </a>
           </div>
         </div>
