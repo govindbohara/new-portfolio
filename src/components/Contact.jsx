@@ -6,6 +6,7 @@ const EMAIL_ADDRESS = "govindbohara76@gmail.com";
 export const GITHUB_URL = "https://github.com/govindbohara";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/govind-bohara-a77505237/";
+export const RESUME_URL = "/public/Govind_SoftwareEngineer.pdf";
 const RESPONSE_DELAY = 1000;
 
 const initialMessages = [
@@ -25,6 +26,12 @@ const initialBotCommands = [
     text: "We'd like to talk with you",
     command: "talk",
     userText: "We'd like to talk with you",
+  },
+  {
+    id: 3,
+    text: "Explore my Resume",
+    command: "resume",
+    userText: "Explore my Resume",
   },
 ];
 
@@ -74,6 +81,25 @@ const botMessages = [
       },
     ],
   },
+  {
+    id: 4,
+    command: "resume",
+    texts: ["You can download my resume from the link below:"],
+    dummyCommand: [
+      {
+        id: 1,
+        text: "Download Resume",
+        command: "downloadResume",
+        userText: "Resume",
+      },
+      {
+        id: 2,
+        text: "Other options",
+        command: "other",
+        userText: "Show other options",
+      },
+    ],
+  },
 ];
 
 export default function Contact() {
@@ -114,6 +140,10 @@ export default function Contact() {
       window.open(`${LINKEDIN_URL}`, "_blank");
       return;
     }
+    if (command.command === "downloadResume") {
+      window.open(`${RESUME_URL}`, "_blank");
+      return;
+    }
     if (command.command === "other") {
       setSelectedCommand("hello");
       setIsBotTyping(false);
@@ -133,7 +163,7 @@ export default function Contact() {
 
     setTimeout(() => {
       const botResponse = botMessages.find(
-        (msg) => msg.command === command.command
+        (msg) => msg.command === command.command,
       );
       if (botResponse) {
         botResponse.texts.forEach((text, index) => {
