@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 const useContactStore = create((set) => ({
-  openContactModal: false,
+  openContactModal: true,
   setOpenContactModal: (open) => set({ openContactModal: open }),
 }));
 
