@@ -6,7 +6,7 @@ const EMAIL_ADDRESS = "govindbohara76@gmail.com";
 export const GITHUB_URL = "https://github.com/govindbohara";
 export const LINKEDIN_URL =
   "https://www.linkedin.com/in/govind-bohara-a77505237/";
-export const RESUME_URL = "/Govind_SoftwareEngineer.pdf";
+export const RESUME_URL = "/Govind_Bohara_Resume.pdf";
 const RESPONSE_DELAY = 1000;
 
 const initialMessages = [

@@ -91,7 +91,7 @@ export default function HeroSection() {
             </div>
           </h1>
           <p className="text-4xl font-bold text-center sm:text-6xl lg:text-8xl text-primary-text font-acorn">
-         An Engineer
+            An Engineer
           </p>
           <div className="flex flex-col items-center mt-8 text-sm text-center md:max-w-xl md:mt-10 sm:text-md md:text-lg ">
             <p className="font-medium text-primary-text font-secondary">
@@ -117,7 +117,7 @@ export default function HeroSection() {
               <FaLinkedin className="text-2xl text-primary-text" />
             </a>
             <a
-              href={"/Govind_SoftwareEngineer.pdf"}
+              href={"/Govind_Bohara_Resume.pdf"}
               className="cursor-pointer"
               target="_blank"
               aria-label="resume_govind"
